@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText firstNumber, secondNumber;
@@ -21,32 +22,51 @@ public class MainActivity extends AppCompatActivity {
 
     public void add(View view) {
 
+        if(!firstNumber.getText().toString().isEmpty() && !secondNumber.getText().toString().isEmpty()){
+            float x = Float.parseFloat(firstNumber.getText().toString());
+            float y = Float.parseFloat(secondNumber.getText().toString());
+            float result1 = x + y;
+            result.setText(""+result1);
+        }else {
 
-        float x = Float.parseFloat(firstNumber.getText().toString());
-        float y = Float.parseFloat(secondNumber.getText().toString());
-        float result1 = x + y;
-        result.setText(""+result1);
+            Toast.makeText(this, "Please input number", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
     public void sub(View view) {
-        float x = Float.parseFloat(firstNumber.getText().toString());
-        float y = Float.parseFloat(secondNumber.getText().toString());
-        float result1 = x - y;
-        result.setText(""+result1);
+        if(!firstNumber.getText().toString().isEmpty() && !secondNumber.getText().toString().isEmpty()){
+            float x = Float.parseFloat(firstNumber.getText().toString());
+            float y = Float.parseFloat(secondNumber.getText().toString());
+            float result1 = x - y;
+            result.setText(""+result1);
+        }else {
+
+            Toast.makeText(this, "Please input number", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void mul(View view) {
-        float x = Float.parseFloat(firstNumber.getText().toString());
-        float y = Float.parseFloat(secondNumber.getText().toString());
-        float result1 = x * y;
-        result.setText(""+result1);
+        if(!firstNumber.getText().toString().isEmpty() && !secondNumber.getText().toString().isEmpty()){
+            float x = Float.parseFloat(firstNumber.getText().toString());
+            float y = Float.parseFloat(secondNumber.getText().toString());
+            float result1 = x * y;
+            result.setText(""+result1);
+        }else {
+
+            Toast.makeText(this, "Please input number", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void div(View view) {
-        float x = Float.parseFloat(firstNumber.getText().toString());
-        float y = Float.parseFloat(secondNumber.getText().toString());
-        float result1 = x / y;
-        result.setText(""+result1);
+        if(!firstNumber.getText().toString().isEmpty() && !secondNumber.getText().toString().isEmpty()){
+            float x = Float.parseFloat(firstNumber.getText().toString());
+            float y = Float.parseFloat(secondNumber.getText().toString());
+            float result1 = x / y;
+            result.setText(""+result1);
+        }else {
+
+            Toast.makeText(this, "Please input number", Toast.LENGTH_SHORT).show();
+        }
     }
 }
